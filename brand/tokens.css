@@ -1,0 +1,20 @@
+:root {
+  --labsys-bg-obsidian: #07080A;
+  --labsys-bg-ink: #101820;
+  --labsys-bg-grid: #0B0F10;
+  --labsys-grid-line: #24313A;
+  --labsys-text: #F4F1E8;
+  --labsys-text-muted: #C8C4BA;
+
+  --labsys-blue: #1777E6;
+  --labsys-amber: #FFB21A;
+
+  --labsys-teal: #55C8C2;
+  --labsys-coral: #FF5A4C;
+
+  --labsys-cyan: #00CFE8;
+  --labsys-vermilion: #FF4B2E;
+
+  --labsys-font-mono: "IBM Plex Mono", "JetBrains Mono", "Space Mono",
+    "Roboto Mono", "Courier New", monospace;
+}

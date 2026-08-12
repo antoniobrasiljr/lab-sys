@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">lab.sys square mark</title>
+  <desc id="desc">Square lab.sys mark for avatars and compact use.</desc>
+  <defs>
+    <style>
+      .bg { fill: #07080A; }
+      .mark { fill: none; stroke: #F4F1E8; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+      .word { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 60px; font-weight: 500; letter-spacing: 0; }
+      .neutral { fill: #F4F1E8; }
+      .system { fill: #1777E6; }
+      .dot { fill: #FFB21A; }
+    </style>
+  </defs>
+  <rect class="bg" width="512" height="512"/>
+  <path class="mark" d="M80 158 H432 V314"/>
+  <text class="word" x="88" y="268">
+    <tspan class="neutral">lab</tspan><tspan class="dot">.</tspan><tspan class="system">sys</tspan>
+  </text>
+</svg>

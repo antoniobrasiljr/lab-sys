@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" role="img" aria-labelledby="title desc">
+  <title id="title">lab.sys grid logo</title>
+  <desc id="desc">Grid variant of the lab.sys logo for data, methods, and visualization contexts.</desc>
+  <defs>
+    <pattern id="minor-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#24313A" stroke-width="1" opacity="0.45"/>
+    </pattern>
+    <pattern id="major-grid" width="120" height="120" patternUnits="userSpaceOnUse">
+      <rect width="120" height="120" fill="url(#minor-grid)"/>
+      <path d="M120 0H0V120" fill="none" stroke="#2E3C46" stroke-width="1.4" opacity="0.55"/>
+    </pattern>
+    <style>
+      .bg { fill: #0B0F10; }
+      .mark { fill: none; stroke: #F4F1E8; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .word { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 120px; font-weight: 500; letter-spacing: 0; }
+      .tagline { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 36px; font-weight: 400; letter-spacing: 0; fill: #F4F1E8; }
+      .neutral { fill: #F4F1E8; }
+      .system { fill: #00CFE8; }
+      .dot { fill: #FF4B2E; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="628"/>
+  <rect width="1200" height="628" fill="url(#major-grid)" opacity="0.72"/>
+  <path class="mark" d="M150 170 H1046 V360"/>
+  <text class="word" x="180" y="305">
+    <tspan class="neutral">lab</tspan><tspan class="dot">.</tspan><tspan class="system">sys</tspan>
+  </text>
+  <text class="tagline" x="150" y="430">sistemas semânticas digitalização</text>
+</svg>

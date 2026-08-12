@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">data_PS subgroup logo</title>
+  <desc id="desc">Subgroup logo placing data_PS in the marked side of the Spencer-Brown distinction and lab.sys in the unmarked side.</desc>
+  <defs>
+    <style>
+      .bg { fill: #0B0F10; }
+      .mark { fill: none; stroke: #F4F1E8; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .name { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 86px; font-weight: 500; letter-spacing: 0; }
+      .small { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 28px; font-weight: 400; letter-spacing: 0; fill: #C8C4BA; }
+      .text { fill: #F4F1E8; }
+      .data { fill: #00CFE8; }
+      .accent { fill: #FF4B2E; }
+      .system { fill: #1777E6; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="500"/>
+  <path class="mark" d="M140 130 H680 V330"/>
+  <text class="name" x="184" y="265">
+    <tspan class="data">data</tspan><tspan class="accent">_</tspan><tspan class="text">PS</tspan>
+  </text>
+  <text class="name" x="740" y="265">
+    <tspan class="text">lab</tspan><tspan class="accent">.</tspan><tspan class="system">sys</tspan>
+  </text>
+  <text class="small" x="184" y="365">pensamento social em dados</text>
+  <text class="small" x="740" y="365">sistemas semânticas digitalização</text>
+</svg>

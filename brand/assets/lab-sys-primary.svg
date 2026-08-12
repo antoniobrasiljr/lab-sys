@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 628" role="img" aria-labelledby="title desc">
+  <title id="title">lab.sys primary logo</title>
+  <desc id="desc">Primary lab.sys logo with Spencer-Brown distinction mark, monospaced wordmark, and Portuguese tagline.</desc>
+  <defs>
+    <style>
+      .bg { fill: #07080A; }
+      .mark { fill: none; stroke: #F4F1E8; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .word { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 120px; font-weight: 500; letter-spacing: 0; }
+      .tagline { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 36px; font-weight: 400; letter-spacing: 0; fill: #F4F1E8; }
+      .neutral { fill: #F4F1E8; }
+      .system { fill: #1777E6; }
+      .dot { fill: #FFB21A; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="628"/>
+  <path class="mark" d="M170 170 H1030 V360"/>
+  <text class="word" x="200" y="305">
+    <tspan class="neutral">lab</tspan><tspan class="dot">.</tspan><tspan class="system">sys</tspan>
+  </text>
+  <text class="tagline" x="170" y="430">sistemas semânticas digitalização</text>
+</svg>
