@@ -1,4 +1,5 @@
 import TeamConstellation from "./team-constellation";
+import CommunicationSimulation from "./communication-simulation";
 
 const axes = [
   {
@@ -205,6 +206,7 @@ export default function Home() {
           <a href="#principio">princípio</a>
           <a href="#eixos">eixos</a>
           <a href="#linhas">linhas</a>
+          <a href="#simulacao">simulação</a>
           <a href="#equipe">equipe</a>
         </nav>
         <span className="header-status"><i /> laboratório em formação</span>
@@ -362,9 +364,31 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="simulacao" className="simulation section-shell">
+          <div className="simulation-intro">
+            <div className="section-index"><span>10</span><span>simulação</span></div>
+            <div>
+              <p className="eyebrow">dupla contingência em movimento</p>
+              <h2>As improbabilidades<br />da comunicação.</h2>
+            </div>
+            <div className="simulation-principle">
+              <p>
+                Uma oferta precisa alcançar Ego, ser reconhecida como comunicação e receber
+                alguma sequência. Clique para observar essas seleções entre dez participantes.
+              </p>
+              <p>
+                No início, os encontros são quase aleatórios. Cada retorno reforça o par que o
+                produziu: algumas relações se tornam mais prováveis e, após muitas tentativas,
+                estruturas começam a emergir na matriz.
+              </p>
+            </div>
+          </div>
+          <CommunicationSimulation />
+        </section>
+
         <section id="equipe" className="team section-shell">
           <div className="team-intro">
-            <div className="section-index"><span>10</span><span>equipe</span></div>
+            <div className="section-index"><span>11</span><span>equipe</span></div>
             <div>
               <p className="eyebrow">heterarquia em prática</p>
               <h2>Pesquisa se faz<br />entre diferenças.</h2>
@@ -387,7 +411,21 @@ export default function Home() {
 
       <footer>
         <div className="footer-mark"><Mark /></div>
-        <p>do pensamento social aos algoritmos,<br />das citações aos arquivos,<br />da Wikipedia aos debates digitais.</p>
+        <div className="footer-side">
+          <p>do pensamento social aos algoritmos,<br />das citações aos arquivos,<br />da Wikipedia aos debates digitais.</p>
+          <div className="institutional-environments">
+            <span>ambientes institucionais</span>
+            <div>
+              <a href="https://ufrj.br/" target="_blank" rel="noreferrer">UFRJ</a>
+              <a href="https://www.uff.br/" target="_blank" rel="noreferrer">UFF</a>
+              <a href="https://ppgsa.ifcs.ufrj.br/" target="_blank" rel="noreferrer">PPGSA/UFRJ</a>
+              <a href="https://ppgs.uff.br/" target="_blank" rel="noreferrer">PPGS/UFF</a>
+              <a href="https://www.faperj.br/" target="_blank" rel="noreferrer">FAPERJ</a>
+              <a href="https://www.gov.br/cnpq/pt-br" target="_blank" rel="noreferrer">CNPq</a>
+              <a href="https://www.gov.br/capes/pt-br" target="_blank" rel="noreferrer">CAPES</a>
+            </div>
+          </div>
+        </div>
         <div className="footer-meta"><span>lab.sys © 2026</span><a href="#top">voltar ao topo ↑</a></div>
       </footer>
     </>
