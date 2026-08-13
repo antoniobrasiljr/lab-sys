@@ -11,7 +11,7 @@
     </pattern>
     <style>
       .bg { fill: #0B0F10; }
-      .mark { fill: none; stroke: #F4F1E8; stroke-width: 8; stroke-linecap: round; stroke-linejoin: round; }
+      .mark { fill: none; stroke: #F4F1E8; stroke-width: 8; stroke-linecap: square; stroke-linejoin: miter; }
       .word { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 120px; font-weight: 500; letter-spacing: 0; }
       .tagline { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 36px; font-weight: 400; letter-spacing: 0; fill: #F4F1E8; }
       .neutral { fill: #F4F1E8; }
@@ -25,5 +25,5 @@
   <text class="word" x="180" y="305">
     <tspan class="neutral">lab</tspan><tspan class="dot">.</tspan><tspan class="system">sys</tspan>
   </text>
-  <text class="tagline" x="150" y="430">sistemas semânticas digitalização</text>
+  <text class="tagline" x="180" y="430">[ sistemas / semânticas / digitalização ]</text>
 </svg>

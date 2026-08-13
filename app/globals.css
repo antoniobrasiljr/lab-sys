@@ -28,10 +28,16 @@ img { display: block; max-width: 100%; }
   padding: 0 clamp(20px, 3.5vw, 56px); border-bottom: 1px solid var(--line);
   background: rgba(7, 8, 10, 0.86); backdrop-filter: blur(18px);
 }
+.brand-lockup { display: grid; width: min(58vw, 820px); }
+.form-box { display: flex; align-items: flex-end; min-height: clamp(112px, 14vw, 198px); padding: clamp(30px, 4vw, 54px) clamp(38px, 5vw, 70px) clamp(18px, 2vw, 30px) clamp(20px, 2.3vw, 34px); border-top: 2px solid var(--warm); border-right: 2px solid var(--warm); }
 .wordmark { display: inline-flex; align-items: baseline; font: 500 clamp(64px, 10vw, 154px)/.82 var(--mono); letter-spacing: -.09em; }
 .wordmark b { color: var(--amber); font-weight: 500; }
 .wordmark span:last-child { color: var(--blue); }
-.wordmark--compact { font-size: 20px; letter-spacing: -.06em; }
+.brand-signature { margin: 13px 0 0 clamp(20px, 2.3vw, 34px); color: var(--muted); font-size: clamp(10px, 1vw, 14px); letter-spacing: .045em; }
+.brand-lockup--compact { width: 136px; }
+.brand-lockup--compact .form-box { min-height: 31px; padding: 8px 12px 6px 5px; border-width: 1px; }
+.brand-lockup--compact .wordmark { font-size: 20px; letter-spacing: -.06em; }
+.brand-lockup--compact .brand-signature { margin: 5px 0 0 5px; font-size: 7px; letter-spacing: .025em; }
 .site-header nav { display: flex; gap: clamp(16px, 2.4vw, 36px); font-size: 11px; color: var(--muted); }
 .site-header nav a { transition: color .2s ease; }
 .site-header nav a:hover, .site-header nav a:focus-visible { color: var(--warm); }
@@ -44,10 +50,7 @@ img { display: block; max-width: 100%; }
 .hero-meta, .hero-footer, .hero-content { position: relative; z-index: 1; }
 .hero-meta { display: flex; justify-content: space-between; color: var(--amber); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
 .hero-content { align-self: center; display: grid; gap: clamp(44px, 7vh, 90px); }
-.hero-brand { width: fit-content; display: grid; gap: 20px; }
-.hero-brand::before { content: ""; position: absolute; width: min(54vw, 760px); height: 2px; background: var(--warm); transform: translate(-6%, -22px); }
-.hero-brand::after { content: ""; position: absolute; width: 2px; height: clamp(82px, 12vw, 152px); background: var(--warm); transform: translate(min(54vw, 760px), -22px); }
-.hero-signature { color: var(--muted); font-size: clamp(11px, 1.1vw, 15px); letter-spacing: .08em; }
+.hero-brand { width: fit-content; }
 h1 { max-width: 18ch; font: 500 clamp(40px, 5.7vw, 94px)/.98 var(--sans); letter-spacing: -.055em; }
 h1 em { color: var(--cyan); font-style: normal; }
 .hero-footer { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; }
@@ -108,10 +111,12 @@ h1 em { color: var(--cyan); font-style: normal; }
 
 footer { min-height: 52svh; padding: clamp(70px, 8vw, 120px) clamp(20px, 5vw, 80px) 40px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr auto; gap: 60px; background: var(--blue); color: var(--warm); }
 .footer-mark { display: grid; gap: 18px; align-content: start; }
+.footer-mark .brand-lockup { width: min(46vw, 650px); }
+.footer-mark .form-box { border-color: var(--warm); }
 .footer-mark .wordmark { font-size: clamp(58px, 8vw, 120px); }
 .footer-mark .wordmark b { color: var(--amber); }
 .footer-mark .wordmark span:last-child { color: var(--obsidian); }
-.footer-mark > span { font-size: 10px; letter-spacing: .09em; }
+.footer-mark .brand-signature { color: var(--warm); }
 footer > p { justify-self: end; font: 500 clamp(20px, 2.4vw, 36px)/1.35 var(--sans); letter-spacing: -.03em; }
 .footer-meta { grid-column: 1 / -1; display: flex; justify-content: space-between; padding-top: 18px; border-top: 1px solid rgba(244,241,232,.45); font-size: 10px; }
 
@@ -136,8 +141,8 @@ footer > p { justify-self: end; font: 500 clamp(20px, 2.4vw, 36px)/1.35 var(--sa
   .site-header nav { gap: 20px; font-size: 10px; }
   .hero { min-height: 92svh; padding: 108px 20px 30px; }
   .hero-content { gap: 48px; }
-  .hero-brand::before { width: 78vw; }
-  .hero-brand::after { transform: translate(78vw, -22px); height: 64px; }
+  .brand-lockup { width: min(84vw, 540px); }
+  .brand-signature { font-size: 8px; letter-spacing: 0; }
   .hero-footer { align-items: flex-start; flex-direction: column; }
   .hero-meta span:last-child { display: none; }
   .section-shell { padding-inline: 20px; }
@@ -147,6 +152,7 @@ footer > p { justify-self: end; font: 500 clamp(20px, 2.4vw, 36px)/1.35 var(--sa
   .observation-list article .zone-code { grid-column: 2; }
   .observation-list article div { grid-column: 2; }
   .subgroup { grid-template-columns: 1fr; }
+  .footer-mark .brand-lockup { width: 82vw; }
   footer { grid-template-columns: 1fr; }
   footer > p { justify-self: start; }
 }

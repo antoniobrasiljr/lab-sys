@@ -9,7 +9,8 @@ O lab.sys deve parecer um laboratório sociológico-computacional: rigoroso, con
 Sintese:
 
 - Nome: `lab.sys`, sempre em caixa baixa.
-- Assinatura: `sistemas semânticas digitalização` em texto corrido, monoespaçado.
+- Assinatura principal: `[ sistemas / semânticas / digitalização ]`, monoespaçada e alinhada ao início de `lab.sys`.
+- Assinatura compacta: `[ s / s / d ]`.
 - Forma principal: a marca de distinção, como uma linha superior com queda vertical à direita.
 - Lógica cromática: fundo escuro, texto branco quente, `sys` em cor fria, ponto em cor complementar quente.
 - Papel do ponto: o ponto não é só pontuação; ele funciona como marca mínima de distinção.
@@ -21,7 +22,7 @@ Use a composição horizontal como assinatura institucional:
 `lab.sys`
 `sistemas semânticas digitalização`
 
-A linha de Spencer-Brown deve operar como gesto estrutural, não como moldura decorativa completa. Ela deve ficar aberta, sem fechar o retângulo, para preservar a ideia de distinção e reentrada. O nome deve ficar dentro da forma; a assinatura deve ficar alinhada ao início da forma e abaixo dela, não dentro do campo marcado.
+A linha de Spencer-Brown deve operar como gesto estrutural, não como moldura decorativa completa. O traço horizontal e a queda vertical à direita formam um único ângulo contínuo, sem vão no canto superior direito. A forma permanece aberta nos demais lados, sem fechar um retângulo. O nome fica dentro da parte marcada; a assinatura fica alinhada ao início do nome e abaixo da forma.
 
 Arquivos:
 
@@ -93,6 +94,7 @@ Fazer:
 - Usar ponto colorido como acento pequeno.
 - Usar `sys` como campo cromático principal.
 - Preservar bastante respiro ao redor da marca.
+- Manter a junção superior direita contínua e ortogonal.
 - Usar grid apenas como camada secundária, não como textura obrigatória.
 
 Evitar:

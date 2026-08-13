@@ -54,8 +54,15 @@ const methods = [
 
 function Mark({ compact = false }: { compact?: boolean }) {
   return (
-    <span className={compact ? "wordmark wordmark--compact" : "wordmark"} aria-label="lab ponto sys">
-      <span>lab</span><b>.</b><span>sys</span>
+    <span className={compact ? "brand-lockup brand-lockup--compact" : "brand-lockup"} aria-label="lab ponto sys — sistemas, semânticas, digitalização">
+      <span className="form-box" aria-hidden="true">
+        <span className="wordmark">
+          <span>lab</span><b>.</b><span>sys</span>
+        </span>
+      </span>
+      <span className="brand-signature">
+        {compact ? "[ s / s / d ]" : "[ sistemas / semânticas / digitalização ]"}
+      </span>
     </span>
   );
 }
@@ -84,10 +91,7 @@ export default function Home() {
             <span>[ s / s / d ]</span>
           </div>
           <div className="hero-content">
-            <div className="hero-brand" aria-hidden="true">
-              <Mark />
-              <span className="hero-signature">sistemas semânticas digitalização</span>
-            </div>
+            <div className="hero-brand"><Mark /></div>
             <h1 id="hero-title">
               observar <em>observações</em>,<br /> mapear distinções,<br /> reconstruir semânticas.
             </h1>
@@ -195,7 +199,7 @@ export default function Home() {
       </main>
 
       <footer>
-        <div className="footer-mark"><Mark /><span>sistemas semânticas digitalização</span></div>
+        <div className="footer-mark"><Mark /></div>
         <p>do pensamento social aos algoritmos,<br />das citações aos arquivos,<br />da Wikipedia aos debates digitais.</p>
         <div className="footer-meta"><span>lab.sys © 2026</span><a href="#top">voltar ao topo ↑</a></div>
       </footer>
