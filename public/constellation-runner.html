@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Controlador da constelação</title>
+  </head>
+  <body>
+    <script>
+      (() => {
+        const host = window.parent;
+
+        function initialize() {
+          const constellation = host.document.querySelector(".constellation");
+
+          if (!constellation || constellation.dataset.constellationReady) return;
+
+          if (!constellation.querySelector(".people-grid--constellation")) return;
+
+          constellation.dataset.constellationReady = "true";
+
+          function reorganize() {
+            const grid = host.document.querySelector(".people-grid--constellation");
+            if (!grid) return;
+
+            constellation.dataset.shuffleCount = String(
+              Number(constellation.dataset.shuffleCount || "0") + 1,
+            );
+
+            const cards = Array.from(grid.children);
+
+            for (let index = cards.length - 1; index > 0; index -= 1) {
+              const randomIndex = Math.floor(Math.random() * (index + 1));
+              [cards[index], cards[randomIndex]] = [cards[randomIndex], cards[index]];
+            }
+
+            if (cards.every((card, index) => card === grid.children[index])) {
+              cards.push(cards.shift());
+            }
+
+            cards.forEach((card) => grid.appendChild(card));
+          }
+
+          host.document.addEventListener("click", (event) => {
+            const button = event.target.closest?.(".shuffle-button");
+            if (!button || !button.closest(".constellation")) return;
+
+            event.preventDefault();
+            reorganize();
+          }, true);
+        }
+
+        if (host.document.readyState === "loading") {
+          host.addEventListener("DOMContentLoaded", initialize, { once: true });
+        } else {
+          initialize();
+        }
+      })();
+    </script>
+  </body>
+</html>

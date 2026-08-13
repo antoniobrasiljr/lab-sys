@@ -139,6 +139,13 @@ export default function TeamConstellation() {
         Antonio Brasil Jr. e Lucas Correia Carvalho exercem uma função compartilhada de cuidado,
         mediação e sustentação das condições coletivas de pesquisa.
       </p>
+      <iframe
+        aria-hidden="true"
+        className="constellation-runner"
+        src="constellation-runner.html"
+        tabIndex={-1}
+        title=""
+      />
     </div>
   );
 }
