@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 type Participation = "articulacao" | "associacao" | "formacao";
 
 type Person = {
@@ -100,27 +96,12 @@ function shufflePeople(source: Person[]) {
     [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
   }
 
-  if (shuffled.every((person, index) => person.name === source[index]?.name)) {
-    shuffled.push(shuffled.shift() as Person);
-  }
-
   return shuffled;
 }
 
 export default function TeamConstellation() {
-  const [orderedPeople, setOrderedPeople] = useState(people);
-  const [isReady, setIsReady] = useState(false);
-  const [shuffleCount, setShuffleCount] = useState(0);
-
-  useEffect(() => {
-    setOrderedPeople(shufflePeople(people));
-    setIsReady(true);
-  }, []);
-
-  function reorganize() {
-    setOrderedPeople((current) => shufflePeople(current));
-    setShuffleCount((count) => count + 1);
-  }
+  const orderedPeople = shufflePeople(people);
+  const shuffleToken = Math.random().toString(36).slice(2);
 
   return (
     <div className="constellation">
@@ -132,12 +113,15 @@ export default function TeamConstellation() {
             </span>
           ))}
         </div>
-        <button type="button" className="shuffle-button" onClick={reorganize}>
-          reorganizar constelação <span aria-hidden="true">↻</span>
-        </button>
+        <form action="#equipe" method="get">
+          <input type="hidden" name="constelacao" value={shuffleToken} />
+          <button type="submit" className="shuffle-button">
+            reorganizar constelação <span aria-hidden="true">↻</span>
+          </button>
+        </form>
       </div>
 
-      <div className={`people-grid people-grid--constellation${isReady ? " is-ready" : ""}`}>
+      <div className="people-grid people-grid--constellation is-ready">
         {orderedPeople.map((person) => (
           <article className={`person-card person-card--${person.participation}`} key={person.name}>
             <span className="participation-label">{participationLabels[person.participation]}</span>
@@ -155,9 +139,6 @@ export default function TeamConstellation() {
         Antonio Brasil Jr. e Lucas Correia Carvalho exercem uma função compartilhada de cuidado,
         mediação e sustentação das condições coletivas de pesquisa.
       </p>
-      <span className="sr-only" aria-live="polite">
-        {shuffleCount > 0 ? "Constelação reorganizada." : ""}
-      </span>
     </div>
   );
 }
