@@ -4,7 +4,7 @@ import "./globals.css";
 
 const title = "lab.sys — sistemas, semânticas, digitalização";
 const description =
-  "Laboratório de pesquisa dedicado a observar sistemas, reconstruir semânticas e investigar infraestruturas digitais.";
+  "Laboratório heterárquico dedicado a observar sistemas, reconstruir semânticas e investigar infraestruturas digitais.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
