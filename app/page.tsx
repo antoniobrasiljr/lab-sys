@@ -64,6 +64,16 @@ const methods = [
   },
 ];
 
+const institutionalEnvironments = [
+  { label: "UFRJ", href: "https://ufrj.br/" },
+  { label: "UFF", href: "https://www.uff.br/" },
+  { label: "PPGSA/UFRJ", href: "https://ppgsa.ifcs.ufrj.br/" },
+  { label: "PPGS/UFF", href: "https://ppgs.uff.br/" },
+  { label: "FAPERJ", href: "https://www.faperj.br/" },
+  { label: "CNPq", href: "https://www.gov.br/cnpq/pt-br" },
+  { label: "CAPES", href: "https://www.gov.br/capes/pt-br" },
+];
+
 const researchLines = [
   {
     code: "CIR",
@@ -404,7 +414,22 @@ export default function Home() {
       </main>
 
       <footer>
-        <div className="footer-mark"><Mark /></div>
+        <div className="footer-ecology">
+          <div className="footer-mark"><Mark /></div>
+          <div className="institutional-environment">
+            <span className="environment-label">ambientes institucionais</span>
+            <ul aria-label="Ambientes institucionais do lab.sys">
+              {institutionalEnvironments.map((environment) => (
+                <li key={environment.label}>
+                  <a href={environment.href} target="_blank" rel="noreferrer">
+                    <i aria-hidden="true" />
+                    {environment.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <p>do pensamento social aos algoritmos,<br />das citações aos arquivos,<br />da Wikipedia aos debates digitais.</p>
         <div className="footer-meta"><span>lab.sys © 2026</span><a href="#top">voltar ao topo ↑</a></div>
       </footer>
