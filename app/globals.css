@@ -98,8 +98,11 @@ h1 em { color: var(--cyan); font-style: normal; }
 .method-body { display: grid; grid-template-columns: minmax(150px, .55fr) 2fr; gap: 40px; }
 .method-body > p { color: #514016; font-size: 12px; line-height: 1.7; max-width: 230px; }
 .method ol { list-style: none; padding: 0; border-top: 1px solid rgba(7,8,10,.36); }
-.method li { display: grid; grid-template-columns: 58px 1fr; align-items: center; padding: 20px 0; border-bottom: 1px solid rgba(7,8,10,.36); font: 500 clamp(18px, 2.2vw, 32px)/1.2 var(--sans); letter-spacing: -.025em; }
+.method li { display: grid; grid-template-columns: 58px 1fr; align-items: start; padding: 20px 0; border-bottom: 1px solid rgba(7,8,10,.36); }
 .method li span { font: 400 10px var(--mono); color: #685217; }
+.method li div { display: grid; gap: 6px; }
+.method li strong { font: 500 clamp(18px, 2.2vw, 32px)/1.2 var(--sans); letter-spacing: -.025em; }
+.method li small { color: #685217; font: 400 10px/1.5 var(--mono); }
 
 .eyebrow { margin-bottom: 26px; color: var(--coral); font-size: 10px; text-transform: uppercase; letter-spacing: .09em; }
 .research-lines { background: #0b0f10; }
@@ -108,7 +111,7 @@ h1 em { color: var(--cyan); font-style: normal; }
 .lines-copy > p:last-child { max-width: 750px; margin-top: 34px; color: var(--muted); font-size: 13px; line-height: 1.8; }
 .lines-field { position: relative; }
 .lines-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.line-card { min-height: 470px; padding: clamp(24px, 3vw, 46px); display: flex; flex-direction: column; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(7,8,10,.87); }
+.line-card { min-height: 760px; padding: clamp(24px, 3vw, 46px); display: flex; flex-direction: column; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(7,8,10,.87); }
 .line-meta { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 10px; }
 .line-meta b { padding: 7px 9px; color: var(--cyan); border: 1px solid currentColor; font-weight: 400; letter-spacing: .12em; }
 .line-card--sem .line-meta b { color: var(--amber); }
@@ -118,6 +121,18 @@ h1 em { color: var(--cyan); font-style: normal; }
 .line-card h3 { max-width: 15ch; font: 500 clamp(28px, 3vw, 48px)/1.04 var(--sans); letter-spacing: -.045em; }
 .line-subtitle { margin-top: 14px; color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; }
 .line-description { max-width: 620px; margin-top: 30px; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.line-publications { margin-top: 38px; }
+.publications-label { display: block; padding-bottom: 12px; color: var(--muted); border-bottom: 1px solid var(--line); font-size: 8px; text-transform: uppercase; letter-spacing: .1em; }
+.line-publications ol { list-style: none; padding: 0; }
+.line-publications li { border-bottom: 1px solid var(--line); }
+.line-publications a { display: grid; grid-template-columns: 42px 1fr auto 15px; gap: 12px; align-items: start; padding: 14px 0; transition: color .2s ease; }
+.line-publications a:hover, .line-publications a:focus-visible { color: var(--cyan); }
+.publication-year { color: var(--muted); font-size: 9px; }
+.publication-main { display: grid; gap: 6px; }
+.publication-main strong { font: 500 12px/1.4 var(--sans); }
+.publication-main small { color: var(--muted); font: 400 8px/1.5 var(--mono); }
+.publication-crosses { align-self: center; color: var(--muted); font-size: 7px; letter-spacing: .08em; white-space: nowrap; }
+.publication-arrow { color: var(--coral); font-size: 11px; }
 .line-signal { margin-top: auto; padding-top: 34px; color: var(--cyan); font-size: 9px; text-transform: uppercase; letter-spacing: .09em; }
 .line-card--sem .line-signal { color: var(--amber); }
 .line-card--dig .line-signal { color: #5da6ff; }
@@ -209,6 +224,8 @@ footer > p { justify-self: end; font: 500 clamp(20px, 2.4vw, 36px)/1.35 var(--sa
   .observation-list article div { grid-column: 2; }
   .lines-grid, .people-grid { grid-template-columns: 1fr; }
   .line-card { min-height: 420px; }
+  .line-publications a { grid-template-columns: 36px 1fr 15px; }
+  .publication-crosses { display: none; }
   .lines-cross { display: none; }
   .constellation-controls { align-items: flex-start; flex-direction: column; }
   .articulation-note { grid-template-columns: 1fr; gap: 12px; }

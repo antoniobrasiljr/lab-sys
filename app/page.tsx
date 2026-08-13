@@ -24,34 +24,43 @@ const axes = [
 const observationZones = [
   {
     code: "ARQ",
-    title: "História e arquivos das ciências sociais",
-    text: "Corpora, trajetórias intelectuais, citações, cânones, recepções e arquivos digitais para observar autodescrições do pensamento social.",
+    title: "Arquivos e repertórios",
+    text: "Documentos, obras, trajetórias intelectuais, formas artísticas e acervos digitais nos quais se inscrevem memórias e autodescrições da sociedade.",
   },
   {
-    code: "SEM",
-    title: "Semânticas e autodescrições",
-    text: "Reconstrução de distinções, categorias, diagnósticos e estabilizações semânticas em escalas históricas e contemporâneas.",
+    code: "CIR",
+    title: "Publicações e circuitos",
+    text: "Periódicos, livros, citações, cânones, imprensa e públicos especializados ou não especializados pelos quais o conhecimento circula.",
   },
   {
-    code: "ALG",
-    title: "Plataformas e comunicação algorítmica",
-    text: "Enciclopédias online, debates digitais, mecanismos de recomendação, inteligência artificial e comunicação artificial.",
+    code: "PLT",
+    title: "Plataformas e interfaces",
+    text: "Redes digitais, enciclopédias online, mecanismos de recomendação, infraestruturas e ordenamentos algorítmicos da visibilidade.",
   },
   {
-    code: "MET",
-    title: "Métodos digitais e visualização",
-    text: "Bibliometria, redes, coocorrência semântica, simulação, visualização de dados e experimentação computacional.",
+    code: "MOD",
+    title: "Modelos e ambientes experimentais",
+    text: "Redes artificiais, simulações, protótipos computacionais e outros ambientes em que estruturas e comunicações podem ser experimentadas.",
   },
 ];
 
 const methods = [
-  "teoria dos sistemas sociais",
-  "análise semântica",
-  "bibliometria",
-  "análise de redes",
-  "reconstrução histórica",
-  "estudos de plataformas",
-  "experimentação computacional",
+  {
+    operation: "reconstruir",
+    text: "semânticas, distinções, trajetórias e processos históricos",
+  },
+  {
+    operation: "rastrear",
+    text: "circulações, citações, controvérsias e assimetrias",
+  },
+  {
+    operation: "modelar",
+    text: "relações, redes, infraestruturas e formas de diferenciação",
+  },
+  {
+    operation: "experimentar",
+    text: "variações, emergências e comunicações em ambientes computacionais",
+  },
 ];
 
 const researchLines = [
@@ -61,6 +70,29 @@ const researchLines = [
     subtitle: "sociologia das comunicações científicas",
     text: "Investiga os circuitos públicos e especializados nos quais as comunicações científicas são produzidas, selecionadas e rearticuladas. Combina cientometria, história e sociologia para analisar assimetrias de centro e periferia, gênero e prestígio, bem como processos de reconhecimento e canonização.",
     signal: "circulação / autoridade",
+    publications: [
+      {
+        title: "O impacto da sociologia: cultura de citações e modelos científicos",
+        authors: "Antonio Brasil Jr. · Lucas Carvalho",
+        year: "2020",
+        href: "https://doi.org/10.20336/rbs.700",
+        crosses: "DIG · SEM",
+      },
+      {
+        title: "Parochialism and Its Meanings in the Latin American Social Sciences",
+        authors: "Lucas Carvalho · Antonio Brasil Jr.",
+        year: "2023",
+        href: "https://doi.org/10.1525/gp.2023.88389",
+        crosses: "DIG",
+      },
+      {
+        title: "A Feminist Citation Burst?",
+        authors: "Alejandra Josiowicz · Antonio Brasil Jr. · Lucas Carvalho",
+        year: "2025",
+        href: "https://doi.org/10.1590/2238-38752025v15211",
+        crosses: "DIG · SEM",
+      },
+    ],
   },
   {
     code: "SEM",
@@ -68,6 +100,29 @@ const researchLines = [
     subtitle: "sentidos, formas e arquivos",
     text: "Investiga como a sociedade produz, estabiliza e transforma sentidos no pensamento social, nas formas artísticas e nos arquivos, reconstruindo conceitos, distinções e autodescrições em perspectiva histórica.",
     signal: "distinção / memória",
+    publications: [
+      {
+        title: "Passagens para a teoria sociológica: Florestan Fernandes e Gino Germani",
+        authors: "Antonio Brasil Jr.",
+        year: "2013",
+        href: "https://biblioteca.clacso.edu.ar/clacso/se/20140311045526/PassagensParaTeoriaSociologica.pdf",
+        crosses: "CIR",
+      },
+      {
+        title: "As ideias como forças sociais: sobre uma agenda de pesquisa",
+        authors: "Antonio Brasil Jr.",
+        year: "2015",
+        href: "https://doi.org/10.1590/2238-38752015v5210",
+        crosses: "CIR",
+      },
+      {
+        title: "A circulação internacional de Florestan Fernandes",
+        authors: "Alejandro Blanco · Antonio Brasil Jr.",
+        year: "2018",
+        href: "https://doi.org/10.1590/2238-38752017v811",
+        crosses: "CIR",
+      },
+    ],
   },
   {
     code: "DIG",
@@ -75,13 +130,52 @@ const researchLines = [
     subtitle: "comunicação e infraestruturas digitais",
     text: "Investiga como redes, plataformas e infraestruturas digitais reorganizam a comunicação, a visibilidade e a formação de relações sociais, combinando modelagem de redes e estudos da comunicação digital.",
     signal: "conexão / infraestrutura",
+    publications: [
+      {
+        title: "Por dentro das Ciências Humanas: um mapeamento semântico da área via base SciELO-Brasil",
+        authors: "Antonio Brasil Jr. · Lucas Carvalho",
+        year: "2020",
+        href: "https://doi.org/10.5944/rhd.vol.5.2020.27627",
+        crosses: "SEM · CIR",
+      },
+      {
+        title: "Mapeando a área de pensamento social no Brasil",
+        authors: "Lucas Carvalho · Antonio Brasil Jr.",
+        year: "2020",
+        href: "https://doi.org/10.29397/reciis.v14i3.2121",
+        crosses: "SEM · CIR",
+      },
+      {
+        title: "Leituras em competição (à distância)",
+        authors: "Antonio Brasil Jr. · Lucas Carvalho · Karim Helayel",
+        year: "2021",
+        href: "https://doi.org/10.11606/issn.2316-901X.v1i78p240-272",
+        crosses: "SEM · CIR",
+      },
+    ],
   },
   {
     code: "SIM",
-    title: "Sociedades artificiais e simulações",
-    subtitle: "experimentação computacional",
-    text: "Desenvolve sociedades artificiais e protótipos computacionais para experimentar como comunicações, estruturas e formas de diferenciação social podem emergir, estabilizar-se e transformar-se.",
+    title: "Comunicação artificial e simulações",
+    subtitle: "modelos e experimentação computacional",
+    text: "Investiga a comunicação artificial e desenvolve simulações e protótipos computacionais para experimentar como comunicações, estruturas e formas de diferenciação podem emergir, estabilizar-se e transformar-se. Sociedades artificiais constituem um subtipo desses ambientes de simulação.",
     signal: "emergência / variação",
+    publications: [
+      {
+        title: "A sociedade contra o acaso: teoria de redes e a pandemia do novo coronavírus",
+        authors: "Lucas Carvalho · Antonio Brasil Jr.",
+        year: "2021",
+        href: "https://doi.org/10.1590/2238-38752021v11esp4",
+        crosses: "DIG",
+      },
+      {
+        title: "A teoria dos sistemas sociais e os estudos sobre IA e algoritmos",
+        authors: "Emerson Palmieri · Antonio Brasil Jr.",
+        year: "2025",
+        href: "https://doi.org/10.5354/0719-0527.2025.82295",
+        crosses: "DIG · SEM",
+      },
+    ],
   },
 ];
 
@@ -182,8 +276,8 @@ export default function Home() {
 
         <section id="observacoes" className="observations section-shell">
           <div className="section-heading section-heading--light">
-            <div className="section-index"><span>04—07</span><span>zonas de observação</span></div>
-            <h2>Onde a pesquisa<br />ganha forma.</h2>
+            <div className="section-index"><span>04—07</span><span>corpora e arenas de observação</span></div>
+            <h2>Onde<br />observamos.</h2>
           </div>
           <div className="observation-list">
             {observationZones.map((zone, index) => (
@@ -199,16 +293,19 @@ export default function Home() {
         <section id="metodo" className="method section-shell">
           <div className="section-heading">
             <div className="section-index"><span>08</span><span>método</span></div>
-            <h2>Teoria não é substituída por técnica.</h2>
+            <h2>Teoria não é substituída pela técnica.</h2>
           </div>
           <div className="method-body">
             <p>
-              Construímos instrumentos conceituais e metodológicos para observar a sociedade em
-              condições de alta complexidade comunicativa.
+              Combinamos reconstrução histórica, análise semântica, cientometria, análise de redes
+              e experimentação computacional. As técnicas funcionam como operações de observação.
             </p>
             <ol>
               {methods.map((method, index) => (
-                <li key={method}><span>{String(index + 1).padStart(2, "0")}</span>{method}</li>
+                <li key={method.operation}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <div><strong>{method.operation}</strong><small>{method.text}</small></div>
+                </li>
               ))}
             </ol>
           </div>
@@ -238,6 +335,26 @@ export default function Home() {
                     <p className="line-subtitle">{line.subtitle}</p>
                   </div>
                   <p className="line-description">{line.text}</p>
+                  <div className="line-publications">
+                    <span className="publications-label">publicações associadas</span>
+                    <ol>
+                      {line.publications.map((publication) => (
+                        <li key={publication.href}>
+                          <a href={publication.href} target="_blank" rel="noreferrer">
+                            <span className="publication-year">{publication.year}</span>
+                            <span className="publication-main">
+                              <strong>{publication.title}</strong>
+                              <small>{publication.authors}</small>
+                            </span>
+                            <span className="publication-crosses" aria-label={`cruzamentos: ${publication.crosses}`}>
+                              {publication.crosses}
+                            </span>
+                            <span className="publication-arrow" aria-hidden="true">↗</span>
+                          </a>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
                   <span className="line-signal">{line.signal}</span>
                 </article>
               ))}
