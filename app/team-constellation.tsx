@@ -101,7 +101,6 @@ function shufflePeople(source: Person[]) {
 
 export default function TeamConstellation() {
   const orderedPeople = shufflePeople(people);
-  const shuffleToken = Math.random().toString(36).slice(2);
 
   return (
     <div className="constellation">
@@ -113,12 +112,11 @@ export default function TeamConstellation() {
             </span>
           ))}
         </div>
-        <form action="#equipe" method="get">
-          <input type="hidden" name="constelacao" value={shuffleToken} />
-          <button type="submit" className="shuffle-button">
-            reorganizar constelação <span aria-hidden="true">↻</span>
-          </button>
-        </form>
+        <iframe
+          className="constellation-button-frame"
+          src="constellation-runner.html"
+          title="Reorganizar constelação"
+        />
       </div>
 
       <div className="people-grid people-grid--constellation is-ready">
@@ -139,13 +137,6 @@ export default function TeamConstellation() {
         Antonio Brasil Jr. e Lucas Correia Carvalho exercem uma função compartilhada de cuidado,
         mediação e sustentação das condições coletivas de pesquisa.
       </p>
-      <iframe
-        aria-hidden="true"
-        className="constellation-runner"
-        src="constellation-runner.html"
-        tabIndex={-1}
-        title=""
-      />
     </div>
   );
 }
