@@ -1,3 +1,5 @@
+import TeamConstellation from "./team-constellation";
+
 const axes = [
   {
     number: "01",
@@ -82,107 +84,6 @@ const researchLines = [
     signal: "emergência / variação",
   },
 ];
-
-type Person = {
-  code: string;
-  name: string;
-  text: string;
-  lines: string[];
-};
-
-const coordination: Person[] = [
-  {
-    code: "C01",
-    name: "Antonio Brasil Jr.",
-    text: "Pensamento social brasileiro e latino-americano, teoria sociológica, história da sociologia, análise de redes e circulação das ciências sociais.",
-    lines: ["CIR", "SEM", "DIG"],
-  },
-  {
-    code: "C02",
-    name: "Lucas Correia Carvalho",
-    text: "Pensamento social brasileiro, teoria sociológica e ciências sociais computacionais, com interesse em redes, semânticas e comunicação científica.",
-    lines: ["CIR", "SEM", "DIG"],
-  },
-];
-
-const associated: Person[] = [
-  {
-    code: "A01",
-    name: "Sergio Pignuoli Ocampo",
-    text: "Teoria sociológica comparada, teoria dos sistemas sociais, teoria da comunicação e modelos de interpretação sociológica para objetos emergentes.",
-    lines: ["SEM", "SIM"],
-  },
-  {
-    code: "A02",
-    name: "Liliana Ramírez Ruiz",
-    text: "Comunicação científica, redes de colaboração e assimetrias de gênero na ciência, com atenção às dinâmicas de reprodução da exclusão científica.",
-    lines: ["CIR", "SIM"],
-  },
-  {
-    code: "A03",
-    name: "Gastón Becerra",
-    text: "Sistemas sociais e complexos, epistemologia, big data, inteligência artificial, ciências sociais computacionais e ferramentas abertas de pesquisa.",
-    lines: ["DIG", "SIM", "SEM"],
-  },
-  {
-    code: "A04",
-    name: "Juan Pedro Blois",
-    text: "História da sociologia, sociologia do conhecimento e das profissões e formas de institucionalização das ciências sociais na América Latina.",
-    lines: ["CIR", "SEM"],
-  },
-  {
-    code: "A05",
-    name: "Ricardo Augusto Galdino Maciel",
-    text: "Presença pública das ciências sociais, circulação na imprensa e relações entre intelectuais, meios de comunicação e debate público.",
-    lines: ["CIR", "SEM"],
-  },
-  {
-    code: "A06",
-    name: "Matheus de Carvalho Barros",
-    text: "Pensamento social, marxismo latino-americano, circulação intelectual, sociologia das comunicações científicas e humanidades digitais.",
-    lines: ["CIR", "SEM", "DIG"],
-  },
-  {
-    code: "A07",
-    name: "Anthony Rodrigues",
-    text: "Cinema e audiovisual negro brasileiro, formas artísticas, mobilização coletiva, circulação cultural e transformação das imagens.",
-    lines: ["SEM", "CIR"],
-  },
-  {
-    code: "A08",
-    name: "Francisco W. Kerche",
-    text: "Sociologia digital, algoritmos, plataformas, redes sociais, comunicação política e desigualdades produzidas por sistemas de inteligência artificial.",
-    lines: ["DIG", "CIR", "SIM"],
-  },
-];
-
-const researchersInTraining: Person[] = [
-  {
-    code: "F01",
-    name: "Hermann da Silveira Zimmerle",
-    text: "Violência, poder local e comunicação política na Baixada Fluminense, além de trabalho, plataformas e precarização.",
-    lines: ["CIR", "DIG"],
-  },
-  {
-    code: "F02",
-    name: "Nathalia Ronchete Borges Cerreia",
-    text: "Sociologia política, movimentos sociais, antifascismo, memória e relações entre futebol, comunicação digital e política.",
-    lines: ["DIG", "SEM"],
-  },
-];
-
-function PersonCard({ person }: { person: Person }) {
-  return (
-    <article className="person-card">
-      <span className="person-code">{person.code}</span>
-      <h3>{person.name}</h3>
-      <p>{person.text}</p>
-      <div className="person-lines" aria-label={`Linhas de pesquisa: ${person.lines.join(", ")}`}>
-        {person.lines.map((line) => <span key={line}>{line}</span>)}
-      </div>
-    </article>
-  );
-}
 
 function Mark({ compact = false }: { compact?: boolean }) {
   return (
@@ -353,46 +254,17 @@ export default function Home() {
             </div>
             <div className="team-principle">
               <p>
-                O lab.sys organiza-se de forma heterárquica. A coordenação compartilhada é uma
-                função de articulação, cuidado e sustentação institucional — não uma posição de
-                comando sobre a pesquisa.
+                A equipe do lab.sys forma uma constelação heterárquica de trajetórias, problemas
+                e métodos. A ordem dos nomes se reorganiza a cada visita, sem posições permanentes
+                de precedência.
               </p>
               <p>
-                As agendas são construídas coletivamente. Cada integrante preserva autonomia para
-                formular problemas, estabelecer colaborações e transitar entre as linhas.
+                As cores indicam diferentes modos de participação — articulação, associação e
+                formação —, não níveis de autoridade.
               </p>
             </div>
           </div>
-
-          <div className="team-group">
-            <div className="team-group-heading">
-              <h3>Coordenação compartilhada</h3>
-              <span>função de articulação · 02</span>
-            </div>
-            <div className="people-grid people-grid--coordination">
-              {coordination.map((person) => <PersonCard key={person.code} person={person} />)}
-            </div>
-          </div>
-
-          <div className="team-group">
-            <div className="team-group-heading">
-              <h3>Pesquisadores associados</h3>
-              <span>colaboração · 08</span>
-            </div>
-            <div className="people-grid">
-              {associated.map((person) => <PersonCard key={person.code} person={person} />)}
-            </div>
-          </div>
-
-          <div className="team-group">
-            <div className="team-group-heading">
-              <h3>Pesquisadores em formação</h3>
-              <span>percursos de pesquisa · 02</span>
-            </div>
-            <div className="people-grid people-grid--training">
-              {researchersInTraining.map((person) => <PersonCard key={person.code} person={person} />)}
-            </div>
-          </div>
+          <TeamConstellation />
         </section>
       </main>
 
