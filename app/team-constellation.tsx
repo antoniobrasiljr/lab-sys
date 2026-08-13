@@ -112,11 +112,7 @@ export default function TeamConstellation() {
             </span>
           ))}
         </div>
-        <iframe
-          className="constellation-button-frame"
-          src="constellation-runner.html"
-          title="Reorganizar constelação"
-        />
+        <span className="constellation-visit-note">nova ordem a cada visita</span>
       </div>
 
       <div className="people-grid people-grid--constellation is-ready">
