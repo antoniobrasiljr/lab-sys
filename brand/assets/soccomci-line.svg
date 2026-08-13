@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">SocComCi — sociologia das comunicações científicas</title>
+  <desc id="desc">Identidade da linha SocComCi como uma forma de Spencer-Brown aninhada dentro da forma institucional do lab.sys.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#24313A" stroke-width="1" opacity="0.36"/>
+    </pattern>
+    <style>
+      .bg { fill: #0B0F10; }
+      .form { fill: none; stroke: #F4F1E8; stroke-linecap: square; stroke-linejoin: miter; }
+      .outer { stroke-width: 7; }
+      .inner { stroke-width: 5; }
+      .name { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 92px; font-weight: 500; letter-spacing: -4px; }
+      .lab { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 58px; font-weight: 500; }
+      .label { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 25px; font-weight: 400; fill: #F4F1E8; }
+      .small { font-family: "IBM Plex Mono", "JetBrains Mono", "Space Mono", "Roboto Mono", "Courier New", monospace; font-size: 18px; font-weight: 400; fill: #C8C4BA; }
+      .warm { fill: #F4F1E8; }
+      .blue { fill: #1777E6; }
+      .amber { fill: #FFB21A; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="650"/>
+  <rect width="1200" height="650" fill="url(#grid)"/>
+
+  <!-- forma institucional: o campo marcado de lab.sys -->
+  <path class="form outer" d="M76 68 H1124 V552"/>
+
+  <!-- distinção interna: a linha de pesquisa dentro do laboratório -->
+  <path class="form inner" d="M150 174 H768 V408"/>
+  <text class="name" x="190" y="320">
+    <tspan class="warm">Soc</tspan><tspan class="blue">Com</tspan><tspan class="amber">Ci</tspan>
+  </text>
+
+  <!-- referência institucional no campo externo, fora da forma interna -->
+  <text class="lab" x="838" y="315">
+    <tspan class="warm">lab</tspan><tspan class="amber">.</tspan><tspan class="blue">sys</tspan>
+  </text>
+
+  <text class="label" x="150" y="488">sociologia das comunicações científicas</text>
+  <text class="small" x="838" y="488">[ s / s / d ]</text>
+  <text class="small" x="76" y="604">linha de pesquisa 01  /  distinção dentro da distinção</text>
+</svg>

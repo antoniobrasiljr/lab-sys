@@ -181,19 +181,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="subgroup section-shell">
-          <div className="section-index"><span>09</span><span>subgrupos</span></div>
+        <section id="linhas" className="research-line section-shell">
+          <div className="section-index"><span>09</span><span>linhas de pesquisa</span></div>
           <div className="subgroup-copy">
-            <p className="eyebrow">uma arquitetura aberta</p>
-            <h2>Linhas de pesquisa herdam a forma do laboratório.</h2>
+            <p className="eyebrow">distinção dentro da distinção</p>
+            <h2>Cada linha torna visível uma operação do laboratório.</h2>
             <p>
-              O nome do grupo ocupa a parte marcada da distinção; lab.sys permanece como
-              referência institucional na parte não marcada.
+              As linhas não formam marcas autônomas. Cada uma introduz uma nova distinção
+              dentro da forma institucional de lab.sys, preservando sua relação com o todo.
             </p>
           </div>
           <figure>
-            <img src="/brand/assets/data-ps-subgroup.svg" alt="data_PS, pensamento social em dados, subgrupo do lab.sys" />
-            <figcaption><span>subgrupo 01</span><span>pensamento social em dados</span></figcaption>
+            <img src="/brand/assets/soccomci-line.svg" alt="SocComCi, sociologia das comunicações científicas, como distinção aninhada dentro da forma do lab.sys" />
+            <figcaption><span>linha 01 · SocComCi</span><span>sociologia das comunicações científicas</span></figcaption>
           </figure>
         </section>
       </main>

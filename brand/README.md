@@ -30,6 +30,7 @@ Arquivos:
 - `assets/lab-sys-grid.svg`: variante para contexto de dados, métodos e visualização.
 - `assets/lab-sys-mark.svg`: versao quadrada para avatar, favicon e miniaturas.
 - `assets/data-ps-subgroup.svg`: exemplo de subgrupo com `data_PS` na parte marcada e `lab.sys` na parte nao marcada.
+- `assets/soccomci-line.svg`: primeira linha de pesquisa como distinção aninhada dentro da forma institucional.
 
 ## Paleta
 
@@ -72,19 +73,19 @@ Preferir monoespaçadas com desenho técnico e boa acentuação:
 
 Evitar fontes excessivamente futuristas, serifas ornamentais e efeitos de display que dificultem leitura.
 
-## Subgrupos
+## Linhas de pesquisa
 
-Subgrupos devem herdar a estrutura, não criar uma marca independente. A regra:
+Linhas devem herdar a estrutura, não criar uma marca independente. A regra:
 
-- O subgrupo ocupa a parte marcada da notacao.
-- `lab.sys` permanece na parte não marcada.
+- A forma institucional de `lab.sys` constitui a distinção externa.
+- A linha de pesquisa ocupa uma segunda forma, aninhada dentro do campo marcado do laboratório.
+- `lab.sys` permanece visível no campo externo, fora da distinção interna.
 - A mesma fonte monoespaçada deve ser usada.
-- A cor do subgrupo pode usar um par complementar próprio, desde que o fundo escuro, a linha branca e o contraste alto sejam mantidos.
+- A linha preserva a paleta institucional: branco quente, azul de sistema e âmbar.
 
-Exemplo:
+Primeira linha:
 
-- `data_PS`: pensamento social em dados.
-- Par sugerido: cyan + vermilion.
+- `SocComCi`: sociologia das comunicações científicas.
 
 ## Regras praticas
 
