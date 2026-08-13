@@ -1,4 +1,5 @@
 import TeamConstellation from "./team-constellation";
+import CommunicationSimulation from "./communication-simulation";
 
 const axes = [
   {
@@ -205,6 +206,7 @@ export default function Home() {
           <a href="#principio">princípio</a>
           <a href="#eixos">eixos</a>
           <a href="#linhas">linhas</a>
+          <a href="#simulacao">simulação</a>
           <a href="#equipe">equipe</a>
         </nav>
         <span className="header-status"><i /> laboratório em formação</span>
@@ -362,9 +364,25 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="simulacao" className="simulation section-shell">
+          <div className="simulation-intro">
+            <div className="section-index"><span>10</span><span>experimento</span></div>
+            <div>
+              <p className="eyebrow">comunicação artificial e simulações</p>
+              <h2>Como o improvável<br />ganha forma.</h2>
+            </div>
+            <p>
+              Alter faz uma oferta a Ego. Ela precisa chegar, ser reconhecida como oferta e receber
+              uma resposta. Experimente como retornos contingentes podem estabilizar expectativas
+              e fazer emergir estruturas de comunicação.
+            </p>
+          </div>
+          <CommunicationSimulation />
+        </section>
+
         <section id="equipe" className="team section-shell">
           <div className="team-intro">
-            <div className="section-index"><span>10</span><span>equipe</span></div>
+            <div className="section-index"><span>11</span><span>equipe</span></div>
             <div>
               <p className="eyebrow">heterarquia em prática</p>
               <h2>Pesquisa se faz<br />entre diferenças.</h2>
