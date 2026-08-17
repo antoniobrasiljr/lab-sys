@@ -1,5 +1,4 @@
 import TeamConstellation from "./team-constellation";
-import CommunicationSimulation from "./communication-simulation";
 
 const axes = [
   {
@@ -390,28 +389,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
-
-        <section id="simulacao" className="simulation section-shell">
-          <div className="simulation-intro">
-            <div className="section-index"><span>10</span><span>simulação</span></div>
-            <div>
-              <p className="eyebrow">dupla contingência em movimento</p>
-              <h2>As improbabilidades<br />da comunicação.</h2>
-            </div>
-            <div className="simulation-principle">
-              <p>
-                Uma oferta precisa alcançar Ego, ser reconhecida como comunicação e receber
-                alguma sequência. Clique para observar essas seleções entre dez participantes.
-              </p>
-              <p>
-                No início, os encontros são quase aleatórios. Cada retorno reforça o par que o
-                produziu: algumas relações se tornam mais prováveis e, após muitas tentativas,
-                estruturas começam a emergir na matriz.
-              </p>
-            </div>
-          </div>
-          <CommunicationSimulation />
         </section>
 
         <section id="equipe" className="team section-shell">
