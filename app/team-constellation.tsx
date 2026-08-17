@@ -1,19 +1,16 @@
 type Coordinator = {
   name: string;
   text: string;
-  lines: string[];
 };
 
 const coordinators: Coordinator[] = [
   {
     name: "Antonio Brasil Jr.",
     text: "Pensamento social brasileiro e latino-americano, teoria sociológica, história da sociologia, análise de redes e circulação das ciências sociais.",
-    lines: ["CIR", "SEM", "DIG"],
   },
   {
     name: "Lucas Correia Carvalho",
     text: "Pensamento social brasileiro, teoria sociológica e ciências sociais computacionais, com interesse em redes, semânticas e comunicação científica.",
-    lines: ["CIR", "SEM", "DIG"],
   },
 ];
 
@@ -41,9 +38,6 @@ export default function TeamConstellation() {
             <span className="participation-label">coordenação</span>
             <h3>{person.name}</h3>
             <p>{person.text}</p>
-            <div className="person-lines" aria-label={`Linhas de pesquisa: ${person.lines.join(", ")}`}>
-              {person.lines.map((line) => <span key={line}>{line}</span>)}
-            </div>
           </article>
         ))}
       </div>
