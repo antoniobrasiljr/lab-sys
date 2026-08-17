@@ -189,16 +189,16 @@ h1 em { color: var(--cyan); font-style: normal; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .constellation-visit-note { color: #5e5c56; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
 
-footer { min-height: 52svh; padding: clamp(70px, 8vw, 120px) clamp(20px, 5vw, 80px) 40px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr auto; gap: 60px; background: var(--blue); color: var(--warm); }
-.footer-ecology { display: grid; grid-template-columns: minmax(300px, 1fr) minmax(150px, .42fr); gap: clamp(28px, 4vw, 64px); align-items: start; }
-.footer-mark { display: grid; gap: 18px; align-content: start; }
-.footer-mark .brand-lockup { width: min(46vw, 650px); }
+footer { min-height: 52svh; padding: clamp(70px, 8vw, 120px) clamp(20px, 5vw, 80px) 40px; display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr auto; gap: 60px; background: var(--blue); color: var(--warm); }
+.footer-ecology { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(150px, .42fr); gap: clamp(28px, 4vw, 64px); align-items: start; }
+.footer-mark { min-width: 0; display: grid; gap: 18px; align-content: start; }
+.footer-mark .brand-lockup { width: 100%; max-width: 650px; }
 .footer-mark .form-box { border-color: var(--warm); }
 .footer-mark .wordmark { font-size: clamp(58px, 8vw, 120px); }
 .footer-mark .wordmark b { color: var(--amber); }
 .footer-mark .wordmark span:last-child { color: var(--obsidian); }
 .footer-mark .brand-signature { color: var(--warm); }
-.institutional-environment { position: relative; margin-top: clamp(16px, 3vw, 42px); padding-left: clamp(22px, 2.5vw, 38px); border-left: 1px solid rgba(244,241,232,.55); }
+.institutional-environment { position: relative; min-width: 0; margin-top: clamp(16px, 3vw, 42px); padding-left: clamp(22px, 2.5vw, 38px); border-left: 1px solid rgba(244,241,232,.55); }
 .institutional-environment::before { content: ""; position: absolute; top: 0; left: -4px; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); }
 .environment-label { display: block; margin-bottom: 18px; color: rgba(244,241,232,.7); font-size: 8px; letter-spacing: .1em; text-transform: uppercase; }
 .institutional-environment ul { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(244,241,232,.3); }
