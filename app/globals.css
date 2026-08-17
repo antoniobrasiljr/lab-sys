@@ -153,6 +153,50 @@ h1 em { color: var(--cyan); font-style: normal; }
 .lines-cross i::after { content: ""; position: absolute; left: 50%; bottom: 0; height: 54px; border-left: 1px solid rgba(0,207,232,.36); }
 .lines-cross i::before { content: ""; position: absolute; left: calc(50% - 3px); top: -3px; width: 7px; height: 7px; border-radius: 50%; background: var(--obsidian); border: 1px solid var(--cyan); }
 
+.simulation { background: #101820; }
+.simulation-intro { display: grid; grid-template-columns: minmax(150px, .55fr) 1fr 1fr; gap: 40px; align-items: start; margin-bottom: clamp(70px, 9vw, 130px); }
+.simulation-intro h2 { max-width: 15ch; font: 500 clamp(36px, 4.8vw, 74px)/1 var(--sans); letter-spacing: -.055em; }
+.simulation-principle { padding-top: 38px; border-top: 1px solid var(--line); }
+.simulation-principle p { color: var(--muted); font-size: 12px; line-height: 1.8; }
+.simulation-principle p + p { margin-top: 22px; }
+.simulation-console { border: 1px solid var(--line); background: var(--obsidian); }
+.simulation-controls { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+.simulation-controls > span, .panel-label { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .09em; }
+.simulation-controls > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.simulation-controls button { padding: 10px 13px; color: var(--warm); border: 1px solid rgba(244,241,232,.3); background: transparent; font: 400 10px var(--mono); cursor: pointer; }
+.simulation-controls button:hover, .simulation-controls button:focus-visible { color: var(--obsidian); background: var(--cyan); border-color: var(--cyan); outline: none; }
+.simulation-controls .reset-button { color: var(--coral); border-color: rgba(255,75,46,.48); }
+.participants { display: grid; grid-template-columns: repeat(10, 1fr); border-bottom: 1px solid var(--line); }
+.participants span { display: grid; place-items: center; aspect-ratio: 1; color: var(--muted); border-right: 1px solid var(--line); font-size: 11px; transition: color .2s, background .2s; }
+.participants span:last-child { border-right: 0; }
+.participants span.is-active { color: var(--obsidian); background: var(--amber); }
+.simulation-readout { display: grid; grid-template-columns: 2fr 1fr; border-bottom: 1px solid var(--line); }
+.stage-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+.stage-grid article { position: relative; min-height: 210px; padding: 22px; display: flex; flex-direction: column; overflow: hidden; border-right: 1px solid var(--line); }
+.stage-grid article > span { color: var(--cyan); font-size: 9px; text-transform: uppercase; letter-spacing: .1em; }
+.stage-grid strong { margin-top: 35px; font: 500 clamp(38px, 4vw, 64px)/1 var(--sans); letter-spacing: -.05em; }
+.stage-grid small { margin-top: auto; color: var(--muted); font: 400 9px/1.5 var(--mono); }
+.stage-grid article > i { position: absolute; inset: auto auto 0 0; height: 3px; background: var(--cyan); transition: width .25s; }
+.last-path { padding: 22px; }
+.last-path > span { color: var(--coral); font-size: 9px; text-transform: uppercase; letter-spacing: .1em; }
+.last-path p { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 38px; }
+.last-path b { display: grid; place-items: center; width: 44px; aspect-ratio: 1; border: 1px solid var(--amber); font-weight: 400; }
+.last-path i { color: var(--cyan); font-style: normal; }
+.last-path em { flex-basis: 100%; margin-top: 12px; color: var(--muted); font: 400 10px/1.5 var(--mono); }
+.last-path .empty-path { color: var(--muted); font-size: 10px; line-height: 1.6; }
+.simulation-detail { display: grid; grid-template-columns: 1fr 1fr; }
+.outcome-distribution, .relation-panel { min-width: 0; padding: 24px; }
+.outcome-distribution { border-right: 1px solid var(--line); }
+.outcome-row { display: grid; grid-template-columns: 1fr auto; gap: 8px 16px; margin-top: 19px; color: var(--muted); font-size: 9px; }
+.outcome-row b { color: var(--warm); font-weight: 400; }
+.outcome-row > i { grid-column: 1 / -1; height: 3px; background: rgba(244,241,232,.08); }
+.outcome-row u { display: block; height: 100%; text-decoration: none; transition: width .25s; }
+.relation-matrix { margin-top: 22px; display: grid; grid-template-columns: 24px repeat(10, 1fr); gap: 4px; align-items: center; }
+.relation-matrix > b, .matrix-row > b { color: var(--muted); font-size: 7px; font-weight: 400; text-align: center; }
+.matrix-row { display: contents; }
+.matrix-row i { aspect-ratio: 1; background: var(--cyan); border-radius: 1px; transition: opacity .25s; }
+.matrix-row i.is-self { background: var(--muted); }
+
 .team { background: var(--warm); color: var(--obsidian); }
 .team .section-index { color: #65645f; }
 .team .section-index span:first-child { color: var(--blue); }
@@ -221,7 +265,7 @@ footer > p { justify-self: end; font: 500 clamp(20px, 2.4vw, 36px)/1.35 var(--sa
   .axis-card h2 { margin-top: 48px; }
   .observation-list article { grid-template-columns: 50px 56px 1fr; gap: 18px; }
   .observation-list article div { grid-template-columns: 1fr; gap: 16px; }
-  .lines-intro, .team-intro { grid-template-columns: 1fr; }
+  .lines-intro, .team-intro, .simulation-intro { grid-template-columns: 1fr; }
   .lines-grid, .people-grid { grid-template-columns: repeat(2, 1fr); }
   .team-principle { max-width: 720px; }
   .articulation-note { grid-template-columns: 1fr 2fr; }
@@ -250,6 +294,14 @@ footer > p { justify-self: end; font: 500 clamp(20px, 2.4vw, 36px)/1.35 var(--sa
   .publication-crosses { display: none; }
   .lines-cross { display: none; }
   .constellation-controls { align-items: flex-start; flex-direction: column; }
+  .simulation-controls { align-items: flex-start; flex-direction: column; }
+  .participants { grid-template-columns: repeat(5, 1fr); }
+  .participants span:nth-child(5) { border-right: 0; }
+  .participants span:nth-child(-n+5) { border-bottom: 1px solid var(--line); }
+  .simulation-readout { grid-template-columns: 1fr; }
+  .stage-grid { border-bottom: 1px solid var(--line); }
+  .stage-grid article { min-height: 170px; padding: 16px; }
+  .stage-grid small { min-height: 3em; }
   .articulation-note { grid-template-columns: 1fr; gap: 12px; }
   .footer-mark .brand-lockup { width: 82vw; }
   footer { grid-template-columns: 1fr; }
