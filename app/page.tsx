@@ -1,5 +1,4 @@
 import TeamConstellation from "./team-constellation";
-import CommunicationSimulation from "./communication-simulation";
 
 const axes = [
   {
@@ -216,8 +215,8 @@ export default function Home() {
           <a href="#principio">princípio</a>
           <a href="#eixos">eixos</a>
           <a href="#linhas">linhas</a>
-          <a href="#simulacao">simulação</a>
-          <a href="#equipe">equipe</a>
+          <a href="#equipe">coordenação</a>
+          <a href="/programas">programas</a>
         </nav>
         <span className="header-status"><i /> laboratório em formação</span>
       </header>
@@ -263,9 +262,27 @@ export default function Home() {
               estabilizações e analisar seus efeitos.
             </p>
           </div>
-          <div className="distinction" aria-hidden="true">
-            <span>observador</span>
-            <span>observação</span>
+          <div className="form-calculus" aria-label="Duas operações básicas do cálculo da forma de George Spencer-Brown">
+            <div className="form-expression" aria-label="Duas marcas equivalem a uma marca">
+              <div aria-hidden="true">
+                <i className="sb-mark" />
+                <i className="sb-mark" />
+                <b>=</b>
+                <i className="sb-mark" />
+              </div>
+            </div>
+            <div className="form-expression" aria-label="Duas marcas aninhadas equivalem ao espaço não marcado">
+              <div aria-hidden="true">
+                <i className="sb-mark sb-mark--nested"><i className="sb-mark" /></i>
+                <b>=</b>
+                <i className="sb-unmarked" />
+              </div>
+            </div>
+            <p className="form-reference">
+              <a href="https://books.google.com/books/about/Laws_of_Form.html?id=UzMZAQAAIAAJ" target="_blank" rel="noreferrer">
+                Spencer-Brown, <cite>Laws of Form</cite> (1969) <span aria-hidden="true">↗</span>
+              </a>
+            </p>
           </div>
         </section>
 
@@ -374,38 +391,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="simulacao" className="simulation section-shell">
-          <div className="simulation-intro">
-            <div className="section-index"><span>10</span><span>experimento</span></div>
-            <div>
-              <p className="eyebrow">comunicação artificial e simulações</p>
-              <h2>Como o improvável<br />ganha forma.</h2>
-            </div>
-            <p>
-              Alter faz uma oferta a Ego. Ela precisa chegar, ser reconhecida como oferta e receber
-              uma resposta. Experimente como retornos contingentes podem estabilizar expectativas
-              e fazer emergir estruturas de comunicação.
-            </p>
-          </div>
-          <CommunicationSimulation />
-        </section>
-
         <section id="equipe" className="team section-shell">
           <div className="team-intro">
-            <div className="section-index"><span>11</span><span>equipe</span></div>
+            <div className="section-index"><span>10</span><span>coordenação</span></div>
             <div>
               <p className="eyebrow">heterarquia em prática</p>
-              <h2>Pesquisa se faz<br />entre diferenças.</h2>
+              <h2>Coordenar sem<br />centralizar.</h2>
             </div>
             <div className="team-principle">
               <p>
-                A equipe do lab.sys forma uma constelação heterárquica de trajetórias, problemas
-                e métodos. A ordem dos nomes se reorganiza a cada visita, sem posições permanentes
-                de precedência.
+                Neste momento de formação, Antonio Brasil Jr. e Lucas Correia Carvalho exercem
+                conjuntamente a coordenação do lab.sys.
               </p>
               <p>
-                As cores indicam diferentes modos de participação — articulação, associação e
-                formação —, não níveis de autoridade.
+                Coordenação nomeia uma função de cuidado e articulação — não uma posição superior.
+                A constelação se ampliará à medida que novos vínculos forem construídos.
               </p>
             </div>
           </div>
@@ -413,7 +413,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer>
+      <footer className="footer-unmarked">
         <div className="footer-ecology">
           <div className="footer-mark"><Mark /></div>
           <div className="institutional-environment">
@@ -430,7 +430,6 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <p>do pensamento social aos algoritmos,<br />das citações aos arquivos,<br />da Wikipedia aos debates digitais.</p>
         <div className="footer-meta"><span>lab.sys © 2026</span><a href="#top">voltar ao topo ↑</a></div>
       </footer>
     </>
