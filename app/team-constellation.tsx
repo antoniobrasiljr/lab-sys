@@ -10,7 +10,7 @@ type Coordinator = {
 const coordinators: Coordinator[] = [
   {
     name: "Antonio Brasil Jr.",
-    text: "Pensamento social brasileiro e latino-americano, teoria sociológica, história da sociologia, análise de redes e circulação das ciências sociais.",
+    text: "Teoria sociológica, teoria dos sistemas sociais, pensamento social e semânticas, análise de redes e cientometria.",
   },
   {
     name: "Lucas Correia Carvalho",
@@ -34,7 +34,7 @@ export default function TeamConstellation() {
       <div className="constellation-controls">
         <div className="participation-legend" aria-label="Modo de participação">
           <span className="legend-item legend-item--articulacao">
-            <i aria-hidden="true" />coordenação compartilhada
+            <i aria-hidden="true" />função de articulação
           </span>
         </div>
         <span className="constellation-visit-note">ordem alternada a cada visita</span>
@@ -43,18 +43,12 @@ export default function TeamConstellation() {
       <div className="people-grid people-grid--constellation people-grid--coordination is-ready">
         {orderedPeople.map((person) => (
           <article className="person-card person-card--articulacao" key={person.name}>
-            <span className="participation-label">coordenação</span>
+            <span className="participation-label">articulação</span>
             <h3>{person.name}</h3>
             <p>{person.text}</p>
           </article>
         ))}
       </div>
-
-      <p className="articulation-note">
-        <span>coordenação como função</span>
-        A coordenação é exercida como cuidado compartilhado das condições de pesquisa, escuta e
-        conexão. Ela sustenta a heterarquia do laboratório sem se converter em centro permanente.
-      </p>
     </div>
   );
 }
