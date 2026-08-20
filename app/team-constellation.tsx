@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 type Coordinator = {
   name: string;
   text: string;
@@ -19,7 +23,11 @@ function alternateOrder(source: Coordinator[]) {
 }
 
 export default function TeamConstellation() {
-  const orderedPeople = alternateOrder(coordinators);
+  const [orderedPeople, setOrderedPeople] = useState(coordinators);
+
+  useEffect(() => {
+    setOrderedPeople(alternateOrder(coordinators));
+  }, []);
 
   return (
     <div className="constellation">

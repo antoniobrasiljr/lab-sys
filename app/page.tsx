@@ -1,3 +1,4 @@
+import Link from "next/link";
 import TeamConstellation from "./team-constellation";
 
 const axes = [
@@ -216,7 +217,7 @@ export default function Home() {
           <a href="#eixos">eixos</a>
           <a href="#linhas">linhas</a>
           <a href="#equipe">coordenação</a>
-          <a href="/programas">programas</a>
+          <Link href="/programas">programas</Link>
         </nav>
         <span className="header-status"><i /> laboratório em formação</span>
       </header>

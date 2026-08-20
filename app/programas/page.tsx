@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   condensedSyllabus,
   courseModules,
@@ -7,10 +8,25 @@ import {
   resources,
 } from "./course-data";
 
+const title = "Programas de curso — lab.sys";
+const description =
+  "Teoria dos sistemas como provocação às ciências sociais: semântica, análise de redes e algoritmos.";
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = configuredSiteUrl.replace(/\/$/, "");
+const socialImage = `${siteUrl}/og.png`;
+
 export const metadata: Metadata = {
-  title: "Programas de curso — lab.sys",
-  description:
-    "Teoria dos sistemas como provocação às ciências sociais: semântica, análise de redes e algoritmos.",
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: `${siteUrl}/programas/`,
+    title,
+    description,
+    images: [{ url: socialImage, width: 1200, height: 630, alt: "Programas de curso — lab.sys" }],
+  },
+  twitter: { card: "summary_large_image", title, description, images: [socialImage] },
 };
 
 function Mark({ compact = false }: { compact?: boolean }) {
@@ -30,9 +46,9 @@ export default function ProgramsPage() {
   return (
     <div className="program-page">
       <header className="site-header course-header">
-        <a href="/" className="brand-link" aria-label="lab.sys — página inicial">
+        <Link href="/" className="brand-link" aria-label="lab.sys — página inicial">
           <Mark compact />
-        </a>
+        </Link>
         <nav aria-label="Navegação do programa">
           <a href="#ementa">ementa</a>
           <a href="#percurso">percurso</a>
@@ -40,7 +56,7 @@ export default function ProgramsPage() {
           <a href="#referencias">referências</a>
           <a href="#recursos">recursos</a>
         </nav>
-        <a className="header-back" href="/">← laboratório</a>
+        <Link className="header-back" href="/">← laboratório</Link>
       </header>
 
       <main id="top">
