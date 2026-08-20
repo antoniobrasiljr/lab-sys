@@ -141,7 +141,15 @@ export const courseModules: CourseModule[] = [
         ],
       },
       { date: "12/10", title: "Feriado", break: true },
-      { date: "19/10", guest: "Emerson Palmieri", title: "Efeito bolha e algoritmos" },
+      {
+        date: "19/10",
+        guest: "Emerson Palmieri",
+        title: "Efeito bolha e algoritmos",
+        readings: [
+          "PALMIERI, Emerson Rodrigues da Cunha. Social media, echo chambers and contingency: a system theoretical approach about communication in the digital space. Kybernetes, v. 53, n. 8, p. 2593–2604, 2024. DOI: 10.1108/K-12-2022-1650.",
+          "PALMIERI, Emerson; BRASIL JR., Antônio. A teoria dos sistemas sociais e os estudos sobre IA e algoritmos: uma proposta de mapeamento. MAD, n. 53, p. 30–50, 2025. DOI: 10.5354/0719-0527.2025.82295.",
+        ],
+      },
     ],
   },
   {
@@ -187,6 +195,8 @@ export const references = [
   "LUHMANN, Niklas. Die Gesellschaft der Gesellschaft. Frankfurt am Main: Suhrkamp, 1997.",
   "LUHMANN, Niklas. Gesellschaftsstruktur und Semantik: Studien zur Wissenssoziologie der modernen Gesellschaft. Frankfurt am Main: Suhrkamp, 1980.",
   "MASCAREÑO, Aldo. Construct this! O por qué el constructivismo sistémico es real. Revista MAD, n. 23, p. 9–24, 2010.",
+  "PALMIERI, Emerson Rodrigues da Cunha. Social media, echo chambers and contingency: a system theoretical approach about communication in the digital space. Kybernetes, v. 53, n. 8, p. 2593–2604, 2024. DOI: 10.1108/K-12-2022-1650.",
+  "PALMIERI, Emerson; BRASIL JR., Antônio. A teoria dos sistemas sociais e os estudos sobre IA e algoritmos: uma proposta de mapeamento. MAD, n. 53, p. 30–50, 2025. DOI: 10.5354/0719-0527.2025.82295.",
   "PIGNUOLI OCAMPO, Sergio. Los modelos de irreductibilidad social en la teoría sistémica de Niklas Luhmann. Revista Española de Sociología, n. 17, p. 27–48, 2012.",
   "PIGNUOLI OCAMPO, Sergio. El modelo sintético de comunicación de Niklas Luhmann. Cinta de Moebio, n. 47, p. 59–73, 2013.",
   "PIGNUOLI OCAMPO, Sergio. Doble contingencia y orden social desde la teoría de sistemas de Niklas Luhmann. Sociológica, v. 28, n. 78, p. 7–40, 2013.",
